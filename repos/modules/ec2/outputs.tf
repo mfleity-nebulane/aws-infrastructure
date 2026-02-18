@@ -1,9 +1,9 @@
-output "instance_id" {
-  description = "ID of the EC2 instance"
-  value       = aws_instance.this.id
+output "launch_template_id" {
+  description = "ID of the launch template"
+  value       = aws_launch_template.this.id
 }
 
-output "public_ip" {
-  description = "Public IP of the EC2 instance (if assigned)"
-  value       = aws_instance.this.public_ip
+output "autoscaling_group_name" {
+  description = "Name of the autoscaling group"
+  value       = aws_autoscaling_group.this.name
 }
